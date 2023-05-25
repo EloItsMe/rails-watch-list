@@ -1,0 +1,27 @@
+<div class="banner">
+  <h1><%= @list.name %></h1>
+</div>
+
+<div class="my-container">
+  <div class="btn-container">
+    <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "my-btn" %>
+  </div>
+
+  <div class="grid">
+    <% @list.movie_ids.each do |movie_id| %>
+      <% movie = Movie.find(movie_id) %>
+      <div class="my-movie-card">
+        <div class="movie-banner" style="background-image: url('<%= movie.poster_url %>')"></div>
+        <div class="movie-content">
+          <div class="title-rating">
+            <h5><%= movie.title %></h5>
+            <p><%= movie.rating %></p>
+          </div>
+          <p>
+            <%= movie.overview %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

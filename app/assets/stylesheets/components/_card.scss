@@ -1,0 +1,33 @@
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.my-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 250px;
+  border-radius: 5px;
+  background-color: dimgray;
+  text-decoration: none;
+  color: white;
+  transition: transform .3s;
+
+  &:hover{
+    transform: scale(1.05);
+    color: white;
+  }
+}
+
+.my-movie-card{
+  width: auto;
+  .movie-banner{
+    height: 250px;
+    width: 100%;
+
+    background-position: center;
+    background-size: cover;
+  }
+}

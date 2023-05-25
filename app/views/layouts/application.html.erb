@@ -11,6 +11,15 @@
   </head>
 
   <body>
+    <nav>
+      <div class="navbar-container">
+        <div class="logo">🍿</div>
+        <div class="links">
+          <%= link_to "My list", root_path %>
+          <%= link_to "New list", new_list_path %>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>

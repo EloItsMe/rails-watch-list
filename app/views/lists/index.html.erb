@@ -1,0 +1,15 @@
+<div class="banner">
+  <h1>Save all of your movies lists</h1>
+</div>
+
+
+<div class="my-container">
+  <h1>My Lists</h1>
+  <div class="grid">
+    <% @lists.each do |list| %>
+      <%= link_to list_path(list), class: "my-card" do%>
+        <h1><%= list.name %></h1>
+      <% end %>
+    <% end %>
+  </div>
+</div>
