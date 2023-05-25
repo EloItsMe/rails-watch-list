@@ -1,0 +1,6 @@
+<div style="background-image: url('<%= @movie.poster_url %>'); background-size: cover; background-position: center; height: 500px; width: 300px;"></div>
+<h1><%= @movie.title %></h1>
+<p><%= @movie.rating %></p>
+<%= link_to "Back to list", root_path %>
+<br>
+<p><%= @movie.overview %></p>
