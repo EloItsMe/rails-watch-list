@@ -1,5 +1,5 @@
-<div class="banner">
-  <h1><%= @list.name %></h1>
+<div class="banner-container banner-image">
+  <h1 class="banner-title"><%= @list.name %></h1>
 </div>
 
 <div class="my-container">
@@ -20,6 +20,9 @@
           <p>
             <%= movie.overview %>
           </p>
+          <%= link_to bookmark_path(movie.bookmarks[0]), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn-container" do %>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash my-btn-delete"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+          <% end %>
         </div>
       </div>
     <% end %>

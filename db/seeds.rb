@@ -10,6 +10,8 @@ require "open-uri"
 
 movies = JSON.parse(URI.open("http://tmdb.lewagon.com/movie/top_rated").read)["results"]
 
+puts "\n[DELETE BOOKMARK DATABASE...]"
+Bookmark.destroy_all
 
 puts "[DELETE MOVIES DATABASE...]"
 Movie.destroy_all
@@ -17,8 +19,6 @@ Movie.destroy_all
 puts "\n[DELETE LISTS DATABASE...]"
 List.destroy_all
 
-puts "\n[DELETE BOOKMARK DATABASE...]"
-Bookmark.destroy_all
 
 
 puts "\n[CREATE 20 MOVIES]\n\n"

@@ -3,15 +3,45 @@
   justify-content: end;
 
   .my-btn{
-    background-color: limegreen;
-    color: white;
+    background-color: $main-color;
+    color: $text-color;
     text-decoration: none;
     padding: 15px;
     border-radius: 5px;
 
-    transition: transform .3s;
+    transition: all .3s;
     &:hover{
       transform: scale(1.05);
+      box-shadow: rgba(255, 0, 0, 0.4) 5px 5px, rgba(255, 0, 0, 0.3) 10px 10px;
     }
+  }
+  .my-btn-delete{
+    background-color: $main-color;
+    color: $text-color;
+    text-decoration: none;
+    border-radius: 5px;
+    height: 46px;
+    width: 46px;
+    margin: 15px;
+    padding: 10px;
+    transition: all .3s;
+    &:hover{
+      transform: scale(1.05);
+      box-shadow: rgba(255, 0, 0, 0.4) 5px 5px, rgba(255, 0, 0, 0.3) 10px 10px;
+    }
+  }
+}
+.btn-submit{
+  background-color: $main-color;
+  color: $text-color;
+  text-decoration: none;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+
+  transition: all .3s;
+  &:hover{
+    transform: scale(1.05);
+    box-shadow: rgba(255, 0, 0, 0.4) 5px 5px, rgba(255, 0, 0, 0.3) 10px 10px;
   }
 }

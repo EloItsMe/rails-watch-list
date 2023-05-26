@@ -1,0 +1,39 @@
+p, h1, h2, h3, h4, h5, label{
+  color: $text-color;
+}
+a{
+  text-decoration: none;
+}
+li, ul{
+  list-style-type: none;
+}
+.title{
+  font-family: $headers-font;
+  color: $text-color;
+  font-weight: 700;
+  font-size: 47px;
+  padding-bottom: 100px;
+}
+.nav-text-link{
+  font-family: $body-font;
+  color: $text-color;
+}
+
+.banner-title{
+  color: $text-color;
+  font-family: $headers-font;
+  font-weight: 700;
+  font-size: 7vw;
+
+
+
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  z-index: 1;
+}

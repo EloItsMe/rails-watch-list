@@ -1,10 +1,10 @@
-<div class="banner">
-  <h1>Save all of your movies lists</h1>
+<div class="banner-container">
+  <%= video_tag "banner.mp4", class: "banner-video", muted: true, autoplay: true, loop: true %>
+  <h1 class="banner-title">Your movies lists</h1>
 </div>
 
-
 <div class="my-container">
-  <h1>My Lists</h1>
+  <h1 class="title">My Lists</h1>
   <div class="grid">
     <% @lists.each do |list| %>
       <%= link_to list_path(list), class: "my-card" do%>
