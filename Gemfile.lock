@@ -68,7 +68,6 @@ GEM
       tzinfo (~> 2.0)
     autoprefixer-rails (10.4.13.0)
       execjs (~> 2)
-    bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
     builder (3.2.4)
@@ -79,6 +78,10 @@ GEM
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     diff-lcs (1.5.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.12.0)
     execjs (2.8.1)
     ffi (1.15.5)
@@ -209,11 +212,6 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    web-console (4.2.0)
-      actionview (>= 6.0.0)
-      activemodel (>= 6.0.0)
-      bindex (>= 0.4.0)
-      railties (>= 6.0.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -227,6 +225,7 @@ DEPENDENCIES
   autoprefixer-rails
   bootsnap
   debug
+  dotenv-rails
   font-awesome-sass (~> 6.1)
   jbuilder
   jsbundling-rails
@@ -241,7 +240,6 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
-  web-console
 
 RUBY VERSION
    ruby 3.1.2p20
