@@ -7,9 +7,20 @@
   <h1 class="title">My Lists</h1>
   <div class="grid">
     <% @lists.each do |list| %>
-      <%= link_to list_path(list), class: "my-card" do%>
-        <h1><%= list.name %></h1>
+      <% if list.photo.attached? %>
+
+        <%= link_to list_path(list), class: "my-card", style: "background-image: url('#{ cl_image_path list.photo.key }')" do%>
+          <h1><%= list.name %></h1>
+        <% end %>
+
+      <% else %>
+
+        <%= link_to list_path(list), class: "my-card" do%>
+          <h1><%= list.name %></h1>
+        <% end %>
+
       <% end %>
+
     <% end %>
   </div>
 </div>

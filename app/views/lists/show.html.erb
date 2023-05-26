@@ -1,6 +1,12 @@
-<div class="banner-container banner-image">
-  <h1 class="banner-title"><%= @list.name %></h1>
-</div>
+<% if @list.photo.attached? %>
+  <div class="banner-container banner-image" style="background-image: url('<%= cl_image_path @list.photo.key %>')">
+    <h1 class="banner-title"><%= @list.name %></h1>
+  </div>
+<% else %>
+  <div class="banner-container banner-image">
+    <h1 class="banner-title"><%= @list.name %></h1>
+  </div>
+<% end %>
 
 <div class="my-container">
   <div class="btn-container">
